@@ -22,6 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.getElementById('logout').addEventListener('click', function() {
+    // Perform logout functionality here
+    // For example, redirect the user to the logout page
+    window.location.href = "../LinguaConnect/index.html";
+});
+
 document.getElementById('flashcard-form').addEventListener('submit', function(event) {
     event.preventDefault();
     var front = document.getElementById('front').value;
