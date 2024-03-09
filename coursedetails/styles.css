@@ -1,0 +1,206 @@
+.body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:#9AD0C2;
+  }
+  
+  .tutorial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .tutor-container {
+    flex: 1 0 300px;
+    background-color: #F1FADA;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+  
+  .tutor-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .tutor-info {
+    text-align: center;
+  }
+  
+  .tutor-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .tutor-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .tutor-pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .time-slots {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .time-slot-container {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    padding-right: 20px;
+  }
+  
+  .time-slot-container:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+  
+  .time-slot-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .time-slot-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .time-slot-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .time-slot-button:hover {
+    background-color: #45a049;
+  }
+  schedule-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .schedule-slot {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .schedule-slot-time {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .schedule-slot-button {
+      background-color: #007bff;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding: 2rem;
+        background-color: #f5f5f5;
+      }
+      
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      
+      .schedule-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 1rem;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      .schedule-slot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+      }
+      
+      .schedule-slot:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .schedule-slot-time {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        text-align: center;
+      }
+      
+      .schedule-slot-button {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .schedule-slot-button:hover {
+        background-color: #0056b3;
+      }
+      
+      @media (max-width: 600px) {
+        .schedule-slot {
+          padding: 0.5rem;
+        }
+      
+        .schedule-slot-time {
+          font-size: 1rem;
+        }
+      
+        .schedule-slot-button {
+          font-size: 0.7rem;
+          padding: 0.3rem 0.7rem;
+        }
+      }
