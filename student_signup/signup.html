@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Sign Up - LinguaConnect</h1>
-        <form id="mainForm" action="#" method="POST">
+        <form id="mainForm" action="../student_login/student_login.html" method="POST">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required>
 
@@ -74,6 +74,8 @@
         evt.preventDefault();
         createUserWithEmailAndPassword(auth,email.value,password.value)
         .then((credentials)=>{
+            alert('Sign Up successfully Now you can Log In')
+            window.location.assign("../student_login/student_login.html")
             console.log(credentials);
         })
         .catch((error)=>{
