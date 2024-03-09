@@ -43,4 +43,50 @@
 		<p>&copy; 2024 Teaching Platform. All rights reserved.</p>
 	</footer>
 </body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDAr62xKYkHjgRTj8Bj8Df6E7GvvR7DA9U",
+      authDomain: "signinsignup-c88b2.firebaseapp.com",
+      projectId: "signinsignup-c88b2",
+      storageBucket: "signinsignup-c88b2.appspot.com",
+      messagingSenderId: "327831122670",
+      appId: "1:327831122670:web:102160f2c96fcabb9939ff"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase();
+    const auth = getAuth(app);
+    
+    let username = document.getElementById('username');
+    let password = document.getElementById('password');
+    let email = document.getElementById('email');
+    let confirm_password = document.getElementById('confirm-password');
+    let institute = document.getElementById('institute');
+    let mainForm = document.getElementById('mainForm');
+
+    let registerUser = evt => {
+        evt.preventDefault();
+        createUserWithEmailAndPassword(auth,email.value,password.value)
+        .then((credentials)=>{
+            alert('Sign Up successfully Now you can Log In')
+            window.location.assign("../student_login/student_login.html")
+            console.log(credentials);
+        })
+        .catch((error)=>{
+            alert(error.message);
+        })
+
+    }
+
+    mainForm.addEventListener('submit',registerUser);
+  </script>
 </html>
