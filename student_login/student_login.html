@@ -7,16 +7,16 @@
     <title>courseWala</title>
 </head>
 <body>
-    <div class="section">
+    <div  class="section">
         <div class="links">
         <h2>Login to your LinguaConnect account</h2>
         <button><img src="google.png" alt="">Continue with Google</button>
         <button><img src="facebook.png" alt="">Continue with Facebook</button>
         <button><img src="apple.png" alt="">Continue with Apple</button>
         </div>
-        <form action="#">
-            <input class="form_details" type="text" placeholder="E-mail"><br>
-            <input class="form_details" type="text" placeholder="Password"><br>
+        <form id="mainForm" action="#">
+            <input class="form_details" type="text" id="email" placeholder="E-mail"><br>
+            <input class="form_details" type="text" id="password" placeholder="Password"><br>
             <button type="submit">Log in</button>
         </form>
         <h3>or <a href="#">Forgot Password</a></h3>
@@ -30,4 +30,46 @@
 
     </footer>
 </body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDAr62xKYkHjgRTj8Bj8Df6E7GvvR7DA9U",
+      authDomain: "signinsignup-c88b2.firebaseapp.com",
+      projectId: "signinsignup-c88b2",
+      storageBucket: "signinsignup-c88b2.appspot.com",
+      messagingSenderId: "327831122670",
+      appId: "1:327831122670:web:102160f2c96fcabb9939ff"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase();
+    const auth = getAuth(app);
+    
+    let password = document.getElementById('password');
+    let email = document.getElementById('email');
+    
+
+    let signInUser = evt => {
+        evt.preventDefault();
+        signInWithEmailAndPassword(auth,email.value,password.value)
+        .then((credentials)=>{
+            alert('Log in Successfully')
+            console.log(credentials);
+        })
+        .catch((error)=>{
+            alert(error.message);
+        })
+
+    }
+
+    mainForm.addEventListener('submit',signInUser);
+  </script>
 </html>
