@@ -14,6 +14,10 @@
   
   .tutor-container {
     flex: 1 0 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #F1FADA;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -28,6 +32,7 @@
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
+    
   }
   
   .tutor-info {
