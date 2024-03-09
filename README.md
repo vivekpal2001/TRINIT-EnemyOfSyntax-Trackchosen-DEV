@@ -15,7 +15,7 @@ Getting Started :-
 
 To get started with the language learning platform, follow these steps:
 
-1. Clone the Repository: Clone this repository to your local machine using git clone https://github.com/username/repository.git.
+1. Clone the Repository: Clone this repository to your local machine using git clone https://github.com/vivekpal2001/TRINIT-EnemyOfSyntax-Trackchosen-DEV.git.
 2. Set Up Zoom Integration: Set up Zoom integration and configure Zoom API credentials for live class functionality.
 3. Sign Up and Start Learning: Sign up for an account on the platform, enroll in courses, and start learning with live Zoom classes and interactive exercises.
 
