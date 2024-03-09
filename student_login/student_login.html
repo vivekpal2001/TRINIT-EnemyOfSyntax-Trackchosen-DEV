@@ -62,6 +62,7 @@
         signInWithEmailAndPassword(auth,email.value,password.value)
         .then((credentials)=>{
             alert('Log in Successfully')
+            window.location.assign("../student_dashboard/student_dashboard.html")
             console.log(credentials);
         })
         .catch((error)=>{
