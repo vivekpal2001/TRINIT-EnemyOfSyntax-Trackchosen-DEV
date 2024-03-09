@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Apply to Become a Teacher</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main>
+		<section class="form-container">
+			<h2>Apply to Become a Teacher</h2>
+			<form action="submit-application.php" method="post" class="floated-form">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="subject">Subject Area:</label>
+				<select id="subject" name="subject" required>
+					<option value="">Select a subject</option>
+					<option value="Python">Python</option>
+					<option value="Web Developement">Web Developement</option>
+					<option value="Spoken English">Spoken English</option>
+					<option value="DSA with Java">DSA with Java</option>
+					<option value="AWS">AWS</option>
+				</select>
+
+				<label for="experience">Teaching Experience (in years):</label>
+				<input type="number" id="experience" name="experience" min="0" max="50" required>
+
+				<label for="education">Highest Education:</label>
+				<input type="text" id="education" name="education" required>
+
+				<label for="availability">Availability:</label>
+				<textarea id="availability" name="availability" rows="4" cols="50" required></textarea>
+
+				<input type="submit" value="Submit Application">
+			</form>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2024 Teaching Platform. All rights reserved.</p>
+	</footer>
+</body>
+</html>
