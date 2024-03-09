@@ -33,6 +33,7 @@ a {
 }
 body {
     font-family: var(--primary-font);
+    background-color: #9AD0C2;
 }
 
 /* util classes for document */
@@ -121,7 +122,7 @@ body {
 }
 .main-header {
     height: 7.2rem;
-    background: white;
+    background: #F1FADA;
     box-shadow: 0 2px 4px #00000014, 0 4px 12px #00000014;
     display: flex;
     padding: 0 2.4rem;
@@ -566,6 +567,11 @@ body {
         border-radius: 2rem;
         margin: 0;
     }
+}
+
+.img-courses{
+    height: 200px;
+    width: 300px;
 }
 
 /* styling udemy business */
