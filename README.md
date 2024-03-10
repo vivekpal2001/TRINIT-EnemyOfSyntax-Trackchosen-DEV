@@ -26,3 +26,7 @@ Backend: Firebase
 Database: Firebase
 Authentication: Firebase Authentication
 Video Conferencing: Zoom Meeting
+
+Google Drive Link for recording:
+https://drive.google.com/drive/folders/1mqI8YFVYf08SXg-_20yfb1CSeYd62Njd?usp=drive_link
+
